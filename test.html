@@ -1,2 +1,123 @@
-:wq
-:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   
+    <style>
+        .row-offcanvas {
+    position: relative;
+    
+    -webkit-transition: all 1s ease-out;
+         -o-transition: all 1s ease-out;
+            transition: all 1s ease-out;
+    width: 500px;
+    height: 100px;
+    background-color: yellow;
+    right: 0;
+  }
+  
+  /*Remove that strange -15px margins fro bootstrap .row*/
+  .row.row-offcanvas{
+    margin: 0;
+  }
+
+  .row-offcanvas-right {
+    right: 0px;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -40%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -40%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 40%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 40%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas-right {
+    position: absolute;
+    top: 0;
+    right: -40%;
+    width: 40%; /* 6 columns */
+    height: 100px;
+    background-color: red;
+  }
+  
+  .sidebar-offcanvas-left {
+    position: absolute;
+    top: 0;
+    left:-40%;
+    width: 40%; /* 6 columns */
+    height: 100px;
+    background-color: red;
+  }
+ 
+  .row-offcanvas.left {
+    right: 40%; /* 6 columns */
+  }
+  
+  .row-offcanvas.right {
+    right: -40%; /* 6 columns */
+  }
+  
+  
+  .frame{
+      border: 3px solid green;
+      width:500px;
+      margin: 0 auto;
+  }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="frame">
+        
+        
+    <div class="row-offcanvas">
+        
+        <div class="sidebar-offcanvas-left">Content left</div>
+        <div class="sidebar-offcanvas-right">Content left</div>
+    </div>    
+        
+        
+    </div>
+    <button data-toggle="offcanvas-left">click</button>
+    <button data-toggle="offcanvas-right">click</button>
+    
+    
+     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <script>
+        
+        $(document).ready(function () {
+            $('[data-toggle="offcanvas-left"]').click(function () {
+                
+                $('.row-offcanvas').removeClass('right').toggleClass('left');
+            });
+            
+            $('[data-toggle="offcanvas-right"]').click(function () {
+                $('.row-offcanvas').removeClass('left').toggleClass('right');
+            });
+            
+        });
+        
+        
+    </script>
+    
+</body>
+</html>
