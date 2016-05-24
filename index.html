@@ -14,8 +14,13 @@
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
+	<!-- Google Material Design icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300|Fjalla+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
+		<link href="offcanvas.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,7 +31,7 @@
 
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav  class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -35,43 +40,94 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand em-text" href="#">Gamma</a>
+		  <a class="navbar-brand em-text" href="/">
+				<img id="logo" src="img/dataart.png" alt="">
+		  </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#" data-toggle="offcanvas">Регистрация</a></li>
+            <li><a href="#about">Админ</a></li>
+            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
+	<div class="row row-offcanvas row-offcanvas-left">
+			
+		<div class="jumbotron" >
+				
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-md-6 col-md-offset-0">
+						<h1>IT School Odessa	
+								<sapan class="em-text">2016</sapan>
+						</h1>
+						<p>DataArt приглашает студентов и молодых IT-специалистов на бесплатные курсы для начинающих в IT</p>
+						<div class="row">
+							<div class="col-sm-12">
+								<a class="cta-button" href="#" data-toggle="offcanvas">Регистрация</a>
+								<a class="cta-button" href="#">Пройти тест</a>	
+							</div>
+								
+						</div>
+						
+					</div>
+					
+							
+					
+				</div><!--/.row-->
+			</div><!--/.container -->
+		</div>
 
-	<div class="jumbotron">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-12">
-					<h1>Capture 
-						<sapan class="em-text">Life</sapan>
-					</h1>
-					<p>A fun and easy way to share the moments you live for</p>
-					<a href="#"><img class="app-btn" src="img/google.png" alt=""></a>
-					<a href="#"><img class="app-btn" src="img/appstore.png" alt=""></a>
-				</div>
-				<div id="phone-hand" class="col-md-6 col-sm-12">
-					<a href="#"><img class="img-responsive" src="img/phone-hand.png" alt=""></a>
-				</div>
-			</div><!--/.row-->
-		</div><!--/.container -->
+			<section class="registration sidebar-offcanvas">
+					
+														
+								<form>
+									
+									<label class="reg-message">Зарегистрируйтесь для прохождения теста. Введите ваши реальные имя, фамилию и e-mail:</label>
+									<div class="form-group">
+										<label class="sr-only" for="inputFirstName">Имя:</label>
+										<input type="text" class="form-control" id="inputFirstName" placeholder="Имя">
+									</div>
+									
+									<div class="form-group">
+										<label class="sr-only" for="inputLastName">Фамилия:</label>
+										<input type="text" class="form-control" id="inputLastName" placeholder="Фамилия">
+									</div>
+									
+									
+									
+									<div class="form-group">
+										<label class="sr-only" for="inputEmail">Email address</label>
+										<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+									</div>
+									
+									<div class="reg-form-buttons">
+																			
+										<button id="reg-register" type="submit" class="btn btn-default btn-primary"  data-toggle="offcanvas">Регистрация</button>
+										<button id="reg-cancel" type="submit" class="btn btn-default btn-primary" data-toggle="offcanvas">Отмена</button>
+										
+									</div>
+								</form>
+						
+	
+							
+								
+							
+					
+					
+						
+				
+			</section>	
+		
 	</div>
+	
 
 
-    <div class="container">
 
-		<section>
-
-		</section>
 
     </div><!-- /.container -->
 
@@ -79,10 +135,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="bootstrap/js/jquery.min.js"><\/script>')</script>
     <script src="bootstrap/js/bootstrap.js"></script>
-
+		<script src="offcanvas.js"></script>
   </body>
 </html>
 
